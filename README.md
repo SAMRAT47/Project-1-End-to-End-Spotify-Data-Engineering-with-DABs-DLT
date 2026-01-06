@@ -31,7 +31,7 @@ The core orchestration is handled by Azure Data Factory, which manages the **Cha
 #### **Master Pipeline & Alerting**
 The pipeline iterates through table lists using a `ForEach` activity. If the pipeline succeeds or fails, a **Web Activity** triggers an Azure Logic App to send email alerts.
 
-![Main Pipeline](images/adf_pipeline_1.PNG)
+![Main Pipeline](https://github.com/SAMRAT47/Azure_Data_Engineering_Project_Samrat/blob/main/Azure_Data_Engineering_Project_Samrat/images/adf_pipeline_1.PNG)
 *Figure 2: The Master Orchestration pipeline with ForEach iterator and Alerting mechanisms.*
 
 #### **Incremental Logic (CDC)**
@@ -40,13 +40,13 @@ Inside the iterator, the pipeline performs a **Watermark Lookup**:
 2.  **Get New Watermark**: Fetches the current max timestamp from the source.
 3.  **Copy Data**: Moves only the data between `Last_Modified_Date > Old_Watermark` and `Last_Modified_Date <= New_Watermark`.
 
-![Incremental Logic](images/adf_pipeline_2.PNG)
+![Incremental Logic](https://github.com/SAMRAT47/Azure_Data_Engineering_Project_Samrat/blob/main/Azure_Data_Engineering_Project_Samrat/images/adf_pipeline_2.PNG)
 *Figure 3: The internal logic for Incremental Data Loading.*
 
 #### **State Management**
 Once the data copy is successful, a stored procedure or script updates the control table with the new "High Watermark" to prepare for the next run.
 
-![CDC Update](images/adf_pipeline_3.PNG)
+![CDC Update](https://github.com/SAMRAT47/Azure_Data_Engineering_Project_Samrat/blob/main/Azure_Data_Engineering_Project_Samrat/images/adf_pipeline_3.PNG)
 *Figure 4: Updating the Watermark table to maintain state.*
 
 ---
