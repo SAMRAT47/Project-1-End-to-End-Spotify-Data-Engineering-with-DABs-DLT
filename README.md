@@ -22,7 +22,7 @@ The project moves beyond basic ETL by incorporating advanced features like **Uni
 ### 1. Azure Infrastructure Setup
 The project is hosted on a comprehensive Azure Resource Group containing the Data Factory, Databricks Workspace, SQL Database, and Storage Accounts.
 
-![Resource Group](images/Resource_Group.PNG)
+![Resource Group](https://github.com/SAMRAT47/Azure_Data_Engineering_Project_Samrat/blob/main/Azure_Data_Engineering_Project_Samrat/images/Resource_Group.PNG)
 *Figure 1: The Azure Resource Group containing all provisioned services.*
 
 ### 2. Orchestration & Incremental Loading (ADF)
