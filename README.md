@@ -1,4 +1,4 @@
-# Azure End-to-End Data Engineering Project 🚀
+# End-to-End-Spotify-Data-Engineering-with-DABs-DLT 🚀
 
 ## 📌 Project Overview
 This is an in-depth Data Engineering project that builds a robust, scalable ETL pipeline using the Microsoft Azure ecosystem. It demonstrates a complete lifecycle from data ingestion to processing and serving, leveraging modern data architecture principles.
